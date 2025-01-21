@@ -1,0 +1,18 @@
+.container {
+  width: 100%;
+  border: 2px solid var(--grey);
+  border-radius: 5px;
+}
+
+.filters {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.tasks_list {
+  display: flex;
+  flex-direction: column;
+}
