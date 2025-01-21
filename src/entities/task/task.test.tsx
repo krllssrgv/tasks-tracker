@@ -28,7 +28,7 @@ describe('Task', () => {
 
     // act
     render(<Task id={mockedID} title={mockedTitle} done={mockedDone} />);
-    const doneButton = screen.getByTestId('done');
+    const doneButton = screen.getByTestId('task-done');
     fireEvent.click(doneButton);
     fireEvent.click(doneButton);
     fireEvent.click(doneButton);
@@ -52,7 +52,7 @@ describe('Task', () => {
 
     // act
     render(<Task id={mockedID} title={mockedTitle} done={mockedDone} />);
-    const deleteButton = screen.getByTestId('delete');
+    const deleteButton = screen.getByTestId('task-delete');
     fireEvent.click(deleteButton);
 
     // assert

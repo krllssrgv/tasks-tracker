@@ -7,14 +7,18 @@ export const TodoInput = () => {
   return (
     <div className={styles.container}>
       <input
-        data-testid="input"
+        data-testid="todo-input"
         className={styles.input}
         type="text"
         maxLength={40}
         value={title}
         onChange={(event) => setTitle(event.target.value)}
       />
-      <button className={styles.add} onClick={handleAdd} data-testid="save">
+      <button
+        className={styles.add}
+        onClick={handleAdd}
+        data-testid="save-task"
+      >
         +
       </button>
     </div>

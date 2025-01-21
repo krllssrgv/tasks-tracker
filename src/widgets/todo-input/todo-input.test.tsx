@@ -23,8 +23,8 @@ describe('TodoInput', () => {
     // act
     render(<TodoInput />);
 
-    const input = screen.getByTestId('input');
-    const button = screen.getByTestId('save');
+    const input = screen.getByTestId('todo-input');
+    const button = screen.getByTestId('save-task');
 
     fireEvent.change(input, {
       target: { value: 'New title test' },
