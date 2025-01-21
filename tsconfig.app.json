@@ -20,7 +20,17 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    "baseUrl": "./",
+    "paths": {
+      "@app": ["src/app/app"],
+      "@processes": ["src/processes/index"],
+      "@pages": ["src/pages/index"],
+      "@widgets": ["src/widgets/index"],
+      "@features": ["src/features/index"],
+      "@entities": ["src/entities/index"],
+      "@shared": ["src/shared/index"]
+    }
   },
   "include": ["src"]
 }
