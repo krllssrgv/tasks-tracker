@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
+import { Provider } from 'react-redux';
 import { TodoPage } from '@pages';
+import { store } from './store';
 import './app.css';
 
 export const App = () => {
@@ -7,5 +9,9 @@ export const App = () => {
     document.title = 'Your tasks';
   }, []);
 
-  return <TodoPage />;
+  return (
+    <Provider store={store}>
+      <TodoPage />
+    </Provider>
+  );
 };

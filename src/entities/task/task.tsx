@@ -5,13 +5,13 @@ import { useTask } from './use-task';
 import styles from './task.module.scss';
 
 type Props = {
-  id: number;
+  id: string;
   title: string;
   done: boolean;
 };
 
 export const Task = memo(({ id, title, done }: Props) => {
-  const { handleMakeDone, handleRemove } = useTask(id);
+  const { handleSwitch, handleRemove } = useTask(id);
 
   return (
     <div className={styles.container}>
@@ -20,7 +20,7 @@ export const Task = memo(({ id, title, done }: Props) => {
           styles.make_done,
           done ? styles.make_done_green : null
         )}
-        onClick={handleMakeDone}
+        onClick={handleSwitch}
       ></button>
       <div
         className={classNames(styles.title, done ? styles.title_done : null)}
