@@ -9,11 +9,13 @@ export const useAdd = () => {
 
   const handleAdd = () => {
     if (title) {
-      dispatch(addTask({
-        id: uuidv4(),
-        title: title,
-        done: false
-      }));
+      dispatch(
+        addTask({
+          id: uuidv4(),
+          title: title,
+          done: false,
+        })
+      );
       setTitle('');
     }
   };

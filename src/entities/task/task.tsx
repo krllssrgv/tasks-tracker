@@ -16,6 +16,7 @@ export const Task = memo(({ id, title, done }: Props) => {
   return (
     <div className={styles.container}>
       <button
+        data-testid="done"
         className={classNames(
           styles.make_done,
           done ? styles.make_done_green : null
@@ -23,17 +24,17 @@ export const Task = memo(({ id, title, done }: Props) => {
         onClick={handleSwitch}
       ></button>
       <div
+        data-testid="title"
         className={classNames(styles.title, done ? styles.title_done : null)}
       >
         {title}
       </div>
-      <button className={styles.delete}>
-        <img
-          src={remove}
-          alt="Delete"
-          className={styles.image}
-          onClick={handleRemove}
-        />
+      <button
+        className={styles.delete}
+        onClick={handleRemove}
+        data-testid="delete"
+      >
+        <img src={remove} alt="Delete" className={styles.image} />
       </button>
     </div>
   );
