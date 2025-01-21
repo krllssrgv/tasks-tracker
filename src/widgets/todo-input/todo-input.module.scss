@@ -26,4 +26,8 @@
   background: none;
   border-left: 2px solid var(--grey);
   user-select: none;
+
+  &:hover {
+    cursor: pointer;
+  }
 }

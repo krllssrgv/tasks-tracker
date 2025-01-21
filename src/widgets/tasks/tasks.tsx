@@ -1,29 +1,19 @@
 import { useState } from 'react';
-import { Filter, Task } from '@entities';
+import { Filter, Task, selectTasks } from '@entities';
+import { useAppSelector } from '@shared';
 import styles from './tasks.module.scss';
 
 export const Tasks = () => {
   const [filter, setFilter] = useState<'all' | 'done' | 'active'>('all');
-  const t = [
-    {
-      id: 1,
-      title: 'Do something',
-      done: false,
-    },
-    {
-      id: 2,
-      title: 'Do not something',
-      done: true,
-    },
-  ];
+  const currentTasks = useAppSelector(selectTasks);
 
   let filteredTasks;
   if (filter === 'done') {
-    filteredTasks = t.filter((task) => task.done);
+    filteredTasks = Object.values(currentTasks).filter((task) => task.done);
   } else if (filter === 'active') {
-    filteredTasks = t.filter((task) => !task.done);
+    filteredTasks = Object.values(currentTasks).filter((task) => !task.done);
   } else {
-    filteredTasks = t;
+    filteredTasks = Object.values(currentTasks);
   }
 
   const displayedTasks = filteredTasks.map((task) => (
