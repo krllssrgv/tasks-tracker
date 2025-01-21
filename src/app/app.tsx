@@ -1,9 +1,11 @@
+import { useEffect } from 'react';
+import { TodoPage } from '@pages';
 import './app.css';
 
 export const App = () => {
-    return(
-        <>
+    useEffect(() => {
+        document.title = 'Your tasks';
+    }, []);
 
-        </>
-    )
+    return <TodoPage />;
 }
