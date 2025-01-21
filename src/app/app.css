@@ -1,0 +1,27 @@
+@font-face {
+    font-family: Raleway;
+    src: url('../shared/fonts/Raleway-Light.ttf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url('../shared/fonts/Raleway-Regular.ttf');
+    font-weight: 400;
+}
+
+:root {
+    --back: #171621;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--back);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Raleway;
+}
