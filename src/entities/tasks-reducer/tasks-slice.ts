@@ -16,7 +16,7 @@ const tasksSlice = createSlice({
   initialState,
   reducers: {
     initTasks: (state: TasksState, action: PayloadAction<TasksState>) => {
-        Object.assign(state, action.payload);
+      Object.assign(state, action.payload);
     },
     addTask: (state: TasksState, action: PayloadAction<Task>) => {
       state[action.payload.id] = action.payload;
@@ -32,5 +32,6 @@ const tasksSlice = createSlice({
   },
 });
 
-export const { initTasks, addTask, removeTask, switchTask } = tasksSlice.actions;
+export const { initTasks, addTask, removeTask, switchTask } =
+  tasksSlice.actions;
 export const tasksReducer = tasksSlice.reducer;
